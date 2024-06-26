@@ -1,74 +1,142 @@
-E-Commerce Application
-# Fyle_Assignment.github.io
+## E-Commerce Application
 
-Welcome to the repository for the Fyle Assignment! This project showcases our services, projects, and growth in a visually appealing and user-friendly manner.
+This is a full-stack e-commerce application built with React, Redux, Node.js, Express, and MongoDB. It allows users to browse products, add them to the cart, and place orders. Administrators can manage products and order statuses.
 
-#### This web page is hosted [here!](https://lokesh0408.github.io/Fyle_Assignment.github.io/)
+## Features
+- User authentication and authorization
+- Product browsing and searching
+- Shopping cart management
+- Order placement and order history
+- Admin functionalities for product and order management
 
 ## Table of Contents
 
-- [Introduction](#introduction)
+- [Installation](#installation)
+- [Backend Setup](#backend-setup)
+- [Frontend Setup](#frontend-setup)
+- [Running The Application](#running-the-application)
+- [API Endpoints](#api-endpoints)
+  - [Auth Routes](#auth-routes)
+  - [Product Routes](#product-routes)
+  - [Cart Routes](#cart-routes)
+  - [Order Routes](#order-routes)
 - [Technologies Used](#technologies-used)
-- [Sections](#sections)
-  - [What We Do](#what-we-do)
-  - [Our Project](#our-project)
-  - [Experts Growth](#experts-growth)
-- [Setup](#setup)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
+- [Author](#author)
+  
+## Installation
 
-## Introduction
+Before you begin, ensure you have the following installed on your machine:
 
-This project is a demo website designed to provide information about the services, showcase the projects, and highlight the growth and achievements. The website is built using HTML, CSS, Bootstrap, JavaScript, and jQuery.
+- Node.js
+- npm (Node Package Manager)
+- MongoDB
 
-## Technologies Used
-
-- HTML5
-- CSS3
-- Bootstrap
-- JavaScript
-- jQuery
-- Slick Carousel
-
-## Sections
-
-### What We Do
-
-This section highlights the services we provide. It features a slider with images that change on hover to display relevant information.
-
-#### Features
-
-- Autoplaying image slider with three images visible at a time.
-- Hover effect to display service information with a "Read More" button.
-- Custom dot navigation for the slider.
-
-### Our Project
-
-This section showcases our projects with an image on the left and clickable content boxes on the right. Clicking on a content box changes the image.
-
-#### Features
-
-- Centralized headings with distinct colors.
-- Interactive content boxes that change the displayed image on click.
-- Dynamic image loading from Unsplash.
-
-### Experts Growth
-
-This section highlights our company’s growth metrics with four cards in a horizontal layout.
-
-#### Features
-
-- Centralized headings with distinct colors.
-- Four equal-sized cards with images, headings, and metrics.
-- Hover effect on cards to change background color and display a shadow.
-
-## Setup
+## Backend Setup
 
 To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```sh
-   git clone [https://github.com/yourusername/company-website.git](https://github.com/lokesh0408/Fyle_Assignment.github.io)
+   git clone [https://github.com/yourusername/company-website.git](https://github.com/lokesh0408/E-Commerce-Application.git)
 
 2. Navigate to the project directory:
-   cd Fyle_Assignment
+   ```bash
+   cd E-Commerce-Application
+   ```
 
-3. Open index.html in your web browser to view the website.
+3. Navigate to the `backend` directory:
+   ```bash
+   cd e-commerce-backend
+   ```
+
+4. Install the required dependencies:
+   ```bash
+   npm install
+   ```
+
+5. Create a `.env` file in the `backend` directory and add the following environment variables:
+   ```bash
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+   ```
+
+6. Start the backend server:
+   ```bash
+   npm run dev
+   ```
+   The backend server should now be running on `http://localhost:5000`
+
+## Frontend Setup
+
+1. Open a new terminal and navigate to the `frontend` directory:
+   ```bash
+   cd e-commerce-frontend
+   ```
+
+2. Install the required dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the frontend development server:
+   ```bash
+   npm run dev
+   ```
+   The frontend server should now be running on `http://localhost:5173`
+
+## Running the Application
+
+To run the application, ensure both the backend and frontend servers are running. You can then open a browser and navigate to `http://localhost:5173` to use the application.
+
+## API Endpoints
+### Auth Routes
+
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login a user
+
+### Product Routes
+
+- `GET /api/products` - Get all products
+- `GET /api/products/:id` - Get product by ID
+- `GET /api/products/search` - search product by name
+- `GET /api/products/filter/category/:category` - Filter the product by category
+- `GET /api/products/filter/price` - Filter the product by price range
+- `POST /api/products` - Create a new product (Admin only)
+- `PUT /api/products/:id` - Update a product (Admin only)
+- `DELETE /api/products/:id` - Delete a product (Admin only)
+
+### Cart Routes
+
+- `GET /api/cart` - Get the user's cart
+- `POST /api/cart` - Add to cart
+- `DELETE /api/cart/:id` - Delete cart item
+
+### Order Routes
+- `POST /api/orders` - Create a new order
+- `GET /api/orders` - Get all orders for the logged-in user
+- `GET /api/orders/:id` - Get a specific order by ID
+
+## Technologies Used
+
+### Frontend
+
+- React.js
+- Redux
+- React Router
+- Axios
+- Moment.js
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+
+## Author
+
+- Lokesh Jindal (lokeshjindal, lokeshjindal997@gmail.com)
+  - [LinkedIn](https://www.linkedin.com/in/lokesh-kumar04/)
