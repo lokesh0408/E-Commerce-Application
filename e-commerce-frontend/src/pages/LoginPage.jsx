@@ -1,6 +1,3 @@
-// src/pages/LoginPage.jsx
-
-// Import necessary components
 import React from "react";
 import AuthForm from "../components/AuthForm";
 

@@ -1,5 +1,3 @@
-// src/components/Cart.jsx
-
 // Import necessary libraries and hooks
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";

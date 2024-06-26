@@ -1,6 +1,3 @@
-// src/store/cartSlice.js
-
-// Import necessary functions from Redux Toolkit and axios for API calls
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 

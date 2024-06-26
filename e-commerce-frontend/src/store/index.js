@@ -1,6 +1,3 @@
-// src/store/index.js
-
-// Import necessary functions from Redux Toolkit
 import { configureStore } from "@reduxjs/toolkit";
 
 // Import reducers for authentication, products, and cart

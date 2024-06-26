@@ -1,4 +1,3 @@
-// components/OrderForm.jsx
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createNewOrder } from "../store/orderSlice";

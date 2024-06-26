@@ -1,5 +1,3 @@
-// src/pages/OrderHistoryPage.jsx
-
 import React from "react";
 import OrderHistory from "../components/OrderHistory";
 

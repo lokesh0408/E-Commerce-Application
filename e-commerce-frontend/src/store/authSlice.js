@@ -1,5 +1,3 @@
-// src/store/authSlice.js
-
 // Import createSlice from Redux Toolkit
 import { createSlice } from "@reduxjs/toolkit";
 

@@ -1,6 +1,3 @@
-// src/pages/CartPage.jsx
-
-// Import necessary components
 import React from "react";
 import Cart from "../components/Cart";
 

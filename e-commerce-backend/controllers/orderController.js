@@ -1,5 +1,3 @@
-// controllers/orderController.js
-
 const Order = require("../models/orderModel");
 
 // Create a new order
@@ -36,29 +34,6 @@ exports.getOrderById = async (req, res) => {
   try {
     const order = await Order.findById(req.params.id).populate(
       "products.productId"
-    );
-    if (!order) return res.status(404).json({ message: "Order not found" });
-    res.json(order);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
-
-// Update order status (admin only)
-exports.updateOrderStatus = async (req, res) => {
-  try {
-    // Check if user is admin
-    if (!req.user.isAdmin) {
-      return res
-        .status(403)
-        .json({ message: "Unauthorized: Admin access required" });
-    }
-
-    const { status } = req.body;
-    const order = await Order.findByIdAndUpdate(
-      req.params.id,
-      { status },
-      { new: true }
     );
     if (!order) return res.status(404).json({ message: "Order not found" });
     res.json(order);
